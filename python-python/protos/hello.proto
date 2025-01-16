@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package helloPackage;
+
+service HelloWorld {
+    rpc hello(HelloRequest) returns (HelloResponse);
+    rpc age (AgeRequest) returns (AgeResponse);
+}
+
+message AgeRequest {
+    int32 age = 1;
+}
+
+message AgeResponse {
+    string answer = 1;
+}
+
+message HelloRequest {
+    string name = 1;
+}
+
+message HelloResponse {
+    string name = 1;
+}

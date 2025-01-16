@@ -24,4 +24,10 @@ func main() {
 		log.Fatalf("failed to response: %v", err)
 	}
 	log.Printf("Response from python server: %v", response)
+
+	response_age, err := client.Age(context.Background(), &pb.AgeRequest{Age: 27})
+	if err != nil {
+		log.Fatalf("failed to response: %v", err)
+	}
+	log.Printf("Response from python server: %v", response_age)
 }
